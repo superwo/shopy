@@ -1,4 +1,17 @@
 header.mainheader
-  h1 Noroc
-  h2 Privet
-  h3 lskdfj
+  .container
+    .mainheader__top
+      a(href="/").logo
+        img(src="img/logo.png", alt="Logo").logo__img
+          
+      ul.top-menu
+        each item in ['Home', 'Menu', 'Reservation', 'Recipe', 'Blog', 'Pages', 'Contact']
+          li.top-menu__item
+            a(href="#").top-menu__link= item
+        li.top-menu__item
+          a(href="#").top-menu__link.top-menu__link--cart
+            i.icon.icon--cart
+            span
+        li.top-menu__item
+          a(href="#").top-menu__link.top-menu__link--book <i class="icon icon--plate"></i> Book Your Table
+  .mainheader__bottom Banner

@@ -1,6 +1,7 @@
 @import "sass-base/fonts"
 @import "sass-base/libs"
 @import "sass-base/vars"
+@import "sass-base/sprite"
 @import "sass-base/btn"
 @import "sass-base/mixins"
 
@@ -41,6 +42,28 @@ body
 h1, h2, h3, h4, h5, h6
 	color: $title-color
 	font-family: $accent-font
+
+ul, li
+	list-style: none
+	margin: 0
+	padding: 0
+a, a:link, a:visited, a:hover, a:active
+	text-decoration: none
+
+.icon
+	display: inline-block
+	position: relative
+	&--cart
+		+sprite($s-cart)
+	&--plate
+		+sprite($s-plate)
+
+.logo
+	display: block
+	width: 212px
+	&__img
+		width: 100%
+		height: auto
 
 .img-responsive
 	display: block
