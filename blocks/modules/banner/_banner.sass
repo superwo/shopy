@@ -1,6 +1,6 @@
 .top-banner
   background-color: #7d8587
-  background-image: url(../img/texture-table.jpg)
+  background-image: url(../img/texture-dark.jpg)
   background-size: cover
   background-position: left bottom
 
@@ -30,3 +30,88 @@
     font-size: 40px
     span
       color: $accent-color
+
+  &__image
+    max-width: 500px
+    height: auto
+
+.actions
+  background-color: #edf1f3
+
+  &__items
+    height: 100px
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    position: relative
+
+  &__item
+    text-transform: uppercase
+    font-size: 14px
+    font-family: $bold-font
+    line-height: 1.5
+    a
+      color: $title-color
+      display: block
+      position: relative
+      padding-left: 57px
+      span
+        color: $accent-color
+        font-size: 16px
+
+    .icon
+      position: absolute
+      top: 4px
+      left: 0
+    &--menu
+      position: absolute
+      padding-top: 105px
+      font-family: $accent-font
+      font-size: 22px
+      text-transform: none
+      text-align: center
+      z-index: 10
+      background-image: url(../img/flag.png)
+      background-repeat: no-repeat
+      left: 0
+      bottom: 22px
+      +size(204px, 237px)
+      a
+        color: #fff
+        padding-left: 0
+
+    &--reviews
+      a
+        padding-right: 100px
+        border-right: 1px solid #dde3e7
+        &::after
+          +size(35px)
+          content: '>'
+          border-radius: 50px
+          background-color: $accent-color
+          color: $title-color
+          border: 1px solid #fff
+          box-shadow: 0 0 0 3px $accent-color
+          position: absolute
+          text-align: center
+          font-family: $bold-font
+          line-height: 34px
+          font-size: 22px
+          right: 37px
+          top: 5px
+
+    &--phone
+      a
+        margin-left: 35px
+        margin-right: 245px
+        border-right: 1px solid #dde3e7
+        padding-right: 24px
+        &::after
+          content: attr(data-call)
+          position: absolute
+          font-family: $accent-font
+          font-size: 32px
+          white-space: nowrap
+          top: -5px
+          right: -245px
+          margin-left: 45px
