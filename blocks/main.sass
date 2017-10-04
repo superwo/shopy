@@ -48,6 +48,8 @@ p
 
 .sect
 	padding: 95px 0
+	&--special
+		padding-top: 0
 	&__title
 		font-size: 35px
 		white-space: nowrap
@@ -55,6 +57,8 @@ p
 		margin: 0
 		&--left
 			text-align: left
+		&--white
+			color: #fff
 
 ul, li
 	list-style: none
@@ -88,4 +92,6 @@ a, a:link, a:visited, a:hover, a:active
 @import "modules/header/header"
 @import "modules/banner/banner"
 @import "modules/about/about-section"
+@import "modules/special/special"
+@import "sass-base/product"
 @import "sass-base/media" // Всегда в конце

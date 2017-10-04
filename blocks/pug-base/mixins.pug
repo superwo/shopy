@@ -3,3 +3,18 @@ mixin icon(name, mod)
   -mod = mod || ''
   svg(class="icon icon-" + name + ' ' + mod)
     use(xlink:href="img/svg/sprite.svg#" + name)
+
+mixin product(pic, title, price)
+  .product
+    .product__image
+      img(src= pic).img-responsive
+    .product__content
+      h3.product__title= title
+      p printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.
+      .product__info
+        .product__info-left
+          span Home <strong>Delivery</strong>
+          span.product__info-phone 1-008 005 006
+        .product__info-right
+          sup $
+          span.product__info-price= price
