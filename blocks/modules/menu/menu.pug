@@ -1,0 +1,9 @@
+section.sect.sect--menu
+  header
+    h2.sect__title Food Menu
+    
+  .container
+    ul.menu-types
+      each item in ['All', 'Breakfast', 'Lunch', 'Snacks', 'Pizza', 'Soups', 'Dinner']
+        li.menu-types__item
+          a(href="#").menu-types__link= item
