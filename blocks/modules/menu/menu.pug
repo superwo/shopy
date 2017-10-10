@@ -6,4 +6,6 @@ section.sect.sect--menu
     ul.menu-types
       each item in ['All', 'Breakfast', 'Lunch', 'Snacks', 'Pizza', 'Soups', 'Dinner']
         li.menu-types__item
-          a(href="#").menu-types__link= item
+          a(href="#").menu-types__link
+            i(class="icon icon--" + item.toLowerCase())
+            | #{item}
