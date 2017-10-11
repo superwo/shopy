@@ -1,3 +1,11 @@
+mixin menuItem(title, text, price)
+  li.menu__item
+    .menu__item-price
+      sup $
+      span= price
+    h3.menu__item-title= title
+    p.menu__item-text= text
+  
 section.sect.sect--menu
   header
     h2.sect__title Food Menu
@@ -9,3 +17,18 @@ section.sect.sect--menu
           a(href="#").menu-types__link
             i(class="icon icon--" + item.toLowerCase())
             | #{item}
+
+  .menu
+    .container
+      ul.menu__list
+        +menuItem('Ultimate organic fruit salad', 'survived not only five centuries but the leap', '50.25')
+        +menuItem('Ultimate organic fruit salad', 'survived not only five centuries but the leap', '48.50')
+        +menuItem('Plain Pancakes', 'Donec eget augue at diam euismod viverra', '68.00')
+        +menuItem('Plain Pancakes', 'Donec eget augue at diam euismod viverra', '42.00')
+        +menuItem('Ultimate organic fruit salad', 'survived not only five centuries but the leap', '50.45')
+        +menuItem('Ultimate organic fruit salad', 'survived not only five centuries but the leap', '50.45')
+        +menuItem('Toasted jam', 'survived not only five centuries but the leap', '50.45')
+        +menuItem('Ultimate organic fruit salad', 'survived not only five centuries but the leap', '50.45')
+        
+      .menu__btn
+        a(href="#").btn Explore food menu
